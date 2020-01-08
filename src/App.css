@@ -30,7 +30,7 @@
   border-radius: 8px;
   border: 1px solid rgb(136, 136, 136);
   width: 65%;
-  align-self: end;
+  align-self: flex-end;
   margin-bottom: 5px;
   font-size: 2em;
 }
@@ -40,14 +40,13 @@
   border: 2px solid darkolivegreen;
 }
 
-
 #addButton {
   border-radius: 8px;
   border: 1px solid rgb(136, 136, 136);
   height: 3rem;
   width: 65%;
-  align-self: end;
-  margin-bottom: 15px;
+  align-self: flex-end;
+  margin-bottom: 10px;
   background: rgb(200, 202, 195); 
 }
 
@@ -55,6 +54,7 @@
   padding: 5px;
   height: 50vh;
   overflow-y: auto;
+  margin-bottom: 10px;
 }
 
 .listItem {
@@ -77,6 +77,8 @@
   grid-column: 2;
   justify-self: center;
   width: 30%;
+  border-radius: 8px;
+  border: 1px solid grey;
 }
 
 #searchBox {
