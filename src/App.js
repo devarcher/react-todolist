@@ -17,6 +17,10 @@ class todoList extends Component {
 
   // Function to set focus on text input Field
   componentDidMount() {
+    this.fixFocus();
+  }
+  
+  fixFocus = () => {
     this.textInput.current.focus();
   }
 
@@ -38,7 +42,7 @@ class todoList extends Component {
     this.setState({ text: ''});
 
     // Set Focus on Text Input Field
-    this.componentDidMount();
+    this.fixFocus();
   }
 
   removeTodoHandler = (index)=> {
