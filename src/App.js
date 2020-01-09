@@ -36,7 +36,6 @@ class todoList extends Component {
     } else {
       this.state.todos.push('Free time...I guess.')
     }
-    // console.log('addTodoHandler() todo Push: ', this.state.todos);
 
     // Clear input field
     this.setState({ text: ''});
@@ -46,16 +45,7 @@ class todoList extends Component {
   }
 
   removeTodoHandler = (index)=> {
-    // Using Splice - Destructive are requires extra code to return updated Todos[].
-    // this.setState({
-    //   todos: this.state.todos.splice(index, 1)
-    // })
-        // Set state to updated todos state 
-    // (Otherwise splice returns deleted element in new array that is rendered)
-    // this.setState({ todos: this.state.todos })
-    // console.log('todos state after splice***', this.state.todos)
-
-    // Using Filter... I think this one is better. Non-destructive and apparently faster?
+    // Filter through todos, compare todo scoped index with index passed in from VDOM click
     this.setState({
       todos: this.state.todos.filter((todo, i) => i !== index)
     })
@@ -70,10 +60,6 @@ class todoList extends Component {
     this.setState({ query: e.target.value })
     // console.log(e.target.value)
   }
-
-  // searchHandler = () => {
-  //   console.log('handler***', this.state.query)
-  // }
 
   render() {
     let filteredTodos = this.state.todos.filter((todo) => {
